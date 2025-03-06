@@ -1,0 +1,12 @@
+hubspot==0.1.14.dev0
+hubspot_api_client==11.1.0
+uvicorn==0.34.0
+fastapi==0.115.8
+python-dotenv==1.0.1
+pydantic==2.10.6
+pydantic_core==2.27.2
+fuzzywuzzy==0.18.0
+python-dateutil==2.9.0.post0
+pytz==2025.1
+Telethon==1.38.1
+python-Levenshtein==0.27.1
