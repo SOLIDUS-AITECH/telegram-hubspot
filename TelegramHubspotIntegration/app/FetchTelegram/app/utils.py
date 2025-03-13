@@ -29,6 +29,7 @@ async def fetch_user_data_and_messages(credentials):
                 logging.info("Session is valid")
             else:
                 logging.info("Session expired or invalid!")
+                return {"message" : "Get Authenticated Session String using Telegram Auth Token Agent to establish Telegram connection."}
 
             try:
                 await client.start(phone=credentials.telegram_phone_number)
