@@ -1,0 +1,5 @@
+.env
+.venv
+notes.txt
+__pycache__
+commands.txt

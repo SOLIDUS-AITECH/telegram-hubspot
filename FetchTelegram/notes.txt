@@ -1,0 +1,14 @@
+## Important Points -
+
+1. Telegram client connection is done using String Session instead of normal file session to store auth token of previously
+authenticated session and save it as environment variables to use it for next authentication.
+
+If not, It would verify using phone number which needs runtime input when deployed on cloud to give phone number as well as code generated 
+for authentication.
+
+2. May need to get the new session string by connecting locally and then using it on solidus to re deploy as it may expire after
+some number of connections (maybe 20).
+
+2. Need to give phone number, name, api id, api hash and session string of previously connected session of the telegram user to fetch
+all the information for.
+
