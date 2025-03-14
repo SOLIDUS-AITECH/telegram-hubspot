@@ -49,8 +49,3 @@ async def telegram_hubspot_integration(credentials: Annotated[ConnectionCredenti
     except HTTPException as e:
         logging.error(e)
         return { "error": str(e) }
-
-
-
-# if __name__=="__main__":
-#     asyncio.run(telegram_hubspot_integration())

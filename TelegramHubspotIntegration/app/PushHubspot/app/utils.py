@@ -12,24 +12,6 @@ from pathlib import Path
 from logger import logging
 
 
-# env_path = Path(__file__).parents[3] / '.env'
-# load_dotenv(dotenv_path=env_path)
-
-
-# hubspot_api_key = os.getenv("hubspot_api_key")
-# hubspot_owner_id = os.getenv("hubspot_owner_id")
-# hubspot_time_zone = os.getenv("hubspot_time_zone")
-# hubspot_user_name = os.getenv("hubspot_user_name")
-
-
-# hubspot_client = hubspot.Client.create(access_token=hubspot_api_key)
-
-
-# class ContactQuery(BaseModel):
-#     full_name: str
-#     phone_number: str
-#     messages: list[dict[str, str]] = None
-
 
 def put_messages_into_notes(
     hubspot_contact_id, 

@@ -9,13 +9,6 @@ from fastapi import FastAPI, Header, Depends, HTTPException
 from pydantic import BaseModel
 from logger import logging
 
-# load_dotenv()
-
-# api_id = os.getenv("api_id")   
-# api_hash = os.getenv("api_hash")
-# phone_number = os.getenv("phone_number")  
-# my_name = os.getenv("my_name")
-
 
 CODE_FILE = "app/code.txt"
 SESSION_FILE = "app/session_string.txt"

@@ -5,24 +5,13 @@ from dotenv import load_dotenv
 from pathlib import Path
 from logger import logging
 
-# env_path = Path(__file__).parents[3] / '.env'
-# load_dotenv(dotenv_path=env_path)
-
-
-# telegram_api_id = os.getenv("telegram_api_id")   
-# telegram_api_hash = os.getenv("telegram_api_hash")
-# telegram_phone_number = os.getenv("telegram_phone_number")  
-# telegram_user_name = os.getenv("telegram_user_name")
-# session_string = os.getenv("session_string")
 
 
 async def fetch_user_data_and_messages(credentials):
     try:
         if not credentials.owner_name:
             credentials.owner_name = "Me"
-        # print(telegram_api_id)
-        # print(session_string)
-        # async with TelegramClient(session_name, api_id=api_id, api_hash=api_hash) as client:
+
         async with TelegramClient(StringSession(credentials.session_string), api_id=credentials.telegram_api_id, api_hash=credentials.telegram_api_hash) as client:
 
             if await client.is_user_authorized():

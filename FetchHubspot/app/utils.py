@@ -8,11 +8,7 @@ import re
 from fuzzywuzzy import fuzz
 from logger import logging
 
-# load_dotenv()
 
-# hubspot_api_key = os.getenv("HUBSPOT_API_KEY")
-
-# client = hubspot.Client.create(access_token=hubspot_api_key)
 class HubspotCredentials(BaseModel):
     hubspot_api_key: str
 

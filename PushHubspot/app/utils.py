@@ -11,13 +11,6 @@ from dotenv import load_dotenv
 from logger import logging
 
 
-# load_dotenv()
-
-# api_key = os.getenv("api_key")
-# hubspot_owner_id = os.getenv("hubspot_owner_id")
-# time_zone = os.getenv("time_zone")
-# my_name = os.getenv("my_name")
-
 
 class HubspotCredentials(BaseModel):
     hubspot_api_key: str

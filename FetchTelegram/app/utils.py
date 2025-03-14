@@ -5,15 +5,6 @@ from dotenv import load_dotenv
 from logger import logging
 
 
-# load_dotenv()
-
-# api_id = os.getenv("api_id")   
-# api_hash = os.getenv("api_hash")
-# phone_number = os.getenv("phone_number")  
-# my_name = os.getenv("my_name")
-# session_string = os.getenv("session_string")
-
-
 async def fetch_user_data_and_messages(session_string, api_id, api_hash, phone_number, my_name):
     try:
         # async with TelegramClient(session_name, api_id=api_id, api_hash=api_hash).start(phone=phone_number) as client:
@@ -28,6 +19,7 @@ async def fetch_user_data_and_messages(session_string, api_id, api_hash, phone_n
                 logging.info("Session is valid")
             else:
                 logging.info("Session expired or invalid!")
+                return {"message" : "Get Authenticated Session String using Telegram Auth Token Agent to establish Telegram connection."}
 
             await client.start(phone=phone_number)
 
